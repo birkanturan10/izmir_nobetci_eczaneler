@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\izmir_nobetci_eczaneler.props" />
+</Project>

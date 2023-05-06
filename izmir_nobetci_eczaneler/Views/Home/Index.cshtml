@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Pharmacy>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!--Links-->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Ders38_NobetciEczaneAPI.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar bg-primary data-bs-theme="dark"" style="color:white;">
+        <div class="container-fluid  d-flex justify-content-center">
+            <span class="navbar-brand mb-0 h1">İzmir Nöbetçi Eczaneler</span>
+        </div>
+    </nav>
+    <!--Search Box-->
+    <div class="d-flex justify-content-center" style="margin:10px;">
+    Arama Kutucuğu:&nbsp;<input type="text" id="myinput" />
+    </div>
+    <!--Table-->
+    <div class="container">
+        <table class="table table-info">
+        <thead>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model=>model.Tarih)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model.Adi)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model.Telefon)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model.Bolge)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model.Adres)</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Tarih</th>
+                    <td>@item.Adi</td>
+                    <td>@item.Telefon</td>
+                    <td>@item.Bolge</td>
+                    <td>@item.Adres</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $("#myinput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            })
+        })
+    })
+</script>

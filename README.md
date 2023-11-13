@@ -7,5 +7,6 @@ Kullanılan Teknolojiler:
 3. HTML
 4. CSS
 5. Bootstrap
-6. Web API
-7. ASP .NET Core
+6. jQuery
+7. Web API
+8. ASP .NET Core

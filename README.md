@@ -1,2 +1,11 @@
 # izmir_nobetci_eczaneler
-HTML, CSS, C#, Bootstrap, Web API kullanarak yaptığım bu çalışmada, İzmir'deki nöbetçi eczanelerin otomatik olarak yenilenmesini sağladım. Arama kutucuğuna yazıp arama yaptırabilir, İzmir'de o gün hangi nöbetçi eczaneler olduğunu rahatlıkla görebiliriz.
+İzmir'deki nöbetçi eczaneleri görebildiğimiz bir web projesi.
+
+Kullanılan Teknolojiler:
+1. .NET
+2. C#
+3. HTML
+4. CSS
+5. Bootstrap
+6. Web API
+7. ASP .NET Core
